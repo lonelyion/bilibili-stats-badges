@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    { "source": "/", "destination": "https://github.com/lonelyion/bilibili-stats-badges"}
+  ],
+  "rewrites": [
+    { "source": "/followers", "destination": "/api/followers" },
+    { "source": "/following", "destination": "/api/following" },
+    { "source": "/views", "destination": "/api/views" }
+  ]
+}

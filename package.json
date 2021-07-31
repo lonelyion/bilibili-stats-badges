@@ -1,0 +1,12 @@
+{
+  "name": "bilibili-stats-badges",
+  "version": "1.0.0",
+  "repository": "https://github.com/lonelyion/bilibili-stats-badges",
+  "author": "离子 <lonelyion@outlook.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "axios": "^0.21.1",
+    "querystring": "^0.2.1"
+  }
+}
