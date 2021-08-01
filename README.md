@@ -123,6 +123,17 @@ Markdown: `![Likes](https://bilistats.lonelyion.com/views?uid=[你的UID]&type=l
 | `?label_color=magenta` | ![](https://bilistats.lonelyion.com/followers?uid=7564991&label_color=magenta) |
 | `?label_color=33ab06` | ![](https://bilistats.lonelyion.com/followers?uid=7564991&label_color=33ab06) |
 
+### logo_color
+
+改变徽章**左侧**的颜色，支持CSS颜色名字或十六进制数字
+
+> 默认值: `grey`
+
+| 参数 | 外观 |
+| --- | --- |
+| `?logo_color=green` | ![](https://bilistats.lonelyion.com/followers?uid=7564991&logo_color=green) |
+| `?logo_color=cf34eb` | ![](https://bilistats.lonelyion.com/followers?uid=7564991&logo_color=cf34eb) |
+
 ### format
 
 改变数字的格式，支持`none`, `commas`, `short`
