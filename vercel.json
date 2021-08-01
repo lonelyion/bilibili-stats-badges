@@ -5,7 +5,9 @@
   "rewrites": [
     { "source": "/followers", "destination": "/api/followers" },
     { "source": "/following", "destination": "/api/following" },
-    { "source": "/views", "destination": "/api/views" }
+    { "source": "/views", "destination": "/api/views" },
+    { "source": "/level", "destination": "/api/level" },
+    { "source": "/live_status", "destination": "/api/live_status" }
   ],
   "headers": [
     { 

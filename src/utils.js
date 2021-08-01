@@ -28,3 +28,20 @@ export function fetch_upstat(id, type) {
     }
   })
 }
+
+export function fetch_account_info(id, type) {
+  const promise = axios.get(`http://api.bilibili.com/x/space/acc/info?mid=${id}`, {
+    headers: {
+      Cookie: `SESSDATA=${sess_data};`
+    }
+  });
+  return promise.then(res => {
+    //console.log(res.data);
+    switch(type) {
+      case 'level':
+        return res.data.data.level;
+      default: //'live_status'
+        return res.data.data.live_room.liveStatus;
+    }
+  })
+}

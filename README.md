@@ -10,6 +10,7 @@ Bilibili状态徽章，可用于网站、README等地方<del>进行显摆（划�
 
 + [关系状态数徽章](#关系状态数徽章)
 + [UP主状态数徽章](#UP主状态数徽章)
++ [用户信息徽章](#用户信息徽章)
 + [附加参数](#附加参数)
 + [混搭参数](#混搭参数)
 + [调试和部署](#调试和部署)
@@ -78,6 +79,31 @@ HTML: `<img src="https://bilistats.lonelyion.com/views?uid=[你的UID]&type=like
 
 Markdown: `![Likes](https://bilistats.lonelyion.com/views?uid=[你的UID]&type=likes)`
 
+## 用户信息徽章
+
+### 用户等级
+
+![Level](https://bilistats.lonelyion.com/level?uid=7564991)
+
+<del>不会还有人不是B站6级用户吧</del>
+
+链接: `https://bilistats.lonelyion.com/level?uid=[你的UID]`
+
+HTML: `<img src="https://bilistats.lonelyion.com/level?uid=[你的UID]" alt="Level"/>`
+
+Markdown: `![Level](https://bilistats.lonelyion.com/level?uid=[你的UID])`
+
+### 直播间开播状态
+
+![Live Status](https://bilistats.lonelyion.com/live_status?uid=7564991)
+
+就很简单的在不在播
+
+链接: `https://bilistats.lonelyion.com/live_status?uid=[你的UID]`
+
+HTML: `<img src="https://bilistats.lonelyion.com/live_status?uid=[你的UID]" alt="Live Status"/>`
+
+Markdown: `![Live Status](https://bilistats.lonelyion.com/live_status?uid=[你的UID])`
 
 ## 附加参数
 
@@ -116,6 +142,7 @@ Markdown: `![Likes](https://bilistats.lonelyion.com/views?uid=[你的UID]&type=l
 | --- | --- |
 | `?label=粉丝数` | ![](https://bilistats.lonelyion.com/followers?uid=7564991&label=粉丝数) |
 | `?label=B站%20粉丝数` | ![](https://bilistats.lonelyion.com/followers?uid=7564991&color=B站%20粉丝数) |
+| `?label=直播` | ![](https://bilistats.lonelyion.com/live_status?uid=7564991&color=Live) |
 
 ### label_color
 
