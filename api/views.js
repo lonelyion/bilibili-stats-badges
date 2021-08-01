@@ -3,7 +3,7 @@ const constructor = require('../src/badge_constructor');
 
 let defaults = {
   color: 'blue',
-  logo: '/svg/bilibili.svg',
+  logo: 'https://bilistats.lonelyion.com/svg/bilibili.svg',
   style: 'flat-square',
   format: 'none',
   label: 'Bilibili 播放数',
