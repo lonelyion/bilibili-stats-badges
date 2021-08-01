@@ -6,6 +6,8 @@ Bilibili状态徽章，README和功能都待完善
 
 + [关系状态数徽章](#关系状态数徽章)
 + [UP主状态数徽章](#UP主状态数徽章)
++ [附加参数](#附加参数)
++ [混搭参数](#混搭参数)
 
 ## 关系状态数徽章
 
@@ -70,3 +72,75 @@ Markdown: `![Article Views](https://bilistats.lonelyion.com/views?uid=[你的UID
 HTML: `<img src="https://bilistats.lonelyion.com/views?uid=[你的UID]&type=likes" alt="Likes"/>`
 
 Markdown: `![Likes](https://bilistats.lonelyion.com/views?uid=[你的UID]&type=likes)`
+
+
+## 附加参数
+
+### color
+
+改变徽章**右侧**的颜色，支持CSS颜色名字或十六进制数字
+
+> 默认值: `blue`
+
+| 参数 | 外观 |
+| --- | --- |
+| `?color=red` | ![](https://bilistats.lonelyion.com/followers?uid=7564991&color=red) |
+| `?color=0a8b9d` | ![](https://bilistats.lonelyion.com/followers?uid=7564991&color=0a8b9d) |
+
+### style
+
+改变徽章的样式，支持以下几种外观
+
+> 默认值: `flat-square`
+
+| 参数 | 外观 |
+| --- | --- |
+| `?style=plastic` | ![](https://bilistats.lonelyion.com/followers?uid=7564991&style=plastic) |
+| `?style=flat` | ![](https://bilistats.lonelyion.com/followers?uid=7564991&style=flat) |
+| `?style=flat-square` | ![](https://bilistats.lonelyion.com/followers?uid=7564991&style=flat-square) |
+| `?style=for-the-badge` | ![](https://bilistats.lonelyion.com/followers?uid=7564991&style=for-the-badge) |
+| `?style=social` | ![](https://bilistats.lonelyion.com/followers?uid=7564991&style=social) |
+
+### label
+
+改变徽章的标签，特殊字符（如空格）最好使用[URL编码转换](https://www.bejson.com/enc/urlencode/)
+
+> 默认值: `Bilibili 粉丝数`等上面文档显示的那样
+
+| 参数 | 外观 |
+| --- | --- |
+| `?label=粉丝数` | ![](https://bilistats.lonelyion.com/followers?uid=7564991&label=粉丝数) |
+| `?label=B站%20粉丝数` | ![](https://bilistats.lonelyion.com/followers?uid=7564991&color=B站%20粉丝数) |
+
+### label_color
+
+改变徽章**左侧**的颜色，支持CSS颜色名字或十六进制数字
+
+> 默认值: `grey`
+
+| 参数 | 外观 |
+| --- | --- |
+| `?label_color=magenta` | ![](https://bilistats.lonelyion.com/followers?uid=7564991&label_color=magenta) |
+| `?label_color=33ab06` | ![](https://bilistats.lonelyion.com/followers?uid=7564991&label_color=33ab06) |
+
+### format
+
+改变数字的格式，支持`none`, `commas`, `short`
+
+> 默认值: `none`
+
+| 参数 | 外观 |
+| --- | --- |
+| `?format=none` | ![](https://bilistats.lonelyion.com/views?uid=7564991&format=none) |
+| `?format=commas` | ![](https://bilistats.lonelyion.com/views?uid=7564991&format=commas) |
+| `?format=short` | ![](https://bilistats.lonelyion.com/views?uid=7564991&format=short) |
+
+## 混搭参数
+
+通过对url参数的组合，可以同时生效多个样式，例如
+
+| 参数 | 外观 |
+| --- | --- |
+| `?style=social&label=关注` | ![](https://bilistats.lonelyion.com/followers?uid=7564991&style=social&label=关注) |
+| `?label=播放量&style=for-the-badge&color=3d3d3d&format=commas` | ![](https://bilistats.lonelyion.com/views?uid=7564991&?label=播放量&style=for-the-badge&color=3d3d3d&format=commas) |
+| `?label=获赞&style=for-the-badge&color=red&labelColor=ce4630` | ![](https://bilistats.lonelyion.com/views?uid=7564991&type=likes&label=获赞&style=for-the-badge&color=red&labelColor=ce4630) |

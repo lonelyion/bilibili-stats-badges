@@ -15,15 +15,14 @@ export function get_shields_svg(params, defaults) {
   let style = validate_parameter(params.style, /^[A-Za-z\-]+$/, defaults.style);
   let label  = validate_parameter(params.label, /^[^#&?<>]+$/, defaults.label);
   let label_color = validate_parameter(params.label_color, /^([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[A-Za-z]+)$/, defaults.label_color);
-  let format = validate_parameter(params.label_color, /^(commas|short|none)$/, defaults.format);
 
   let message = '';
-  switch(format) {
+  switch(params.format) {
     case 'commas':
-      message = number_format(params.content);
+      message = number_format(params.content).toString();
       break;
     case 'short':
-      message = short_number(params.content);
+      message = short_number(params.content).toString();
       break;
     default: 
       message = params.content.toString();
@@ -79,5 +78,5 @@ function short_number(num)
     for (i = 0; num >= 1000; i++) {
         num /= 1000;
     }
-    return round(num, 1).toString() + units[i];
+    return Math.round(num, 1).toString() + units[i];
 }
