@@ -1,6 +1,10 @@
 # Bilibili Stats Badges
 
-Bilibili状态徽章，README和功能都待完善
+Bilibili状态徽章，可用于网站、README等地方<del>进行显摆（划掉）</del>展示自己的B站账号信息。
+
+<a href="https://vercel.com?utm_source=miriko-ch&amp;utm_campaign=oss" target="_blank">
+  <img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" height="32px">
+</a>
 
 ## 目录
 
@@ -8,6 +12,7 @@ Bilibili状态徽章，README和功能都待完善
 + [UP主状态数徽章](#UP主状态数徽章)
 + [附加参数](#附加参数)
 + [混搭参数](#混搭参数)
++ [调试和部署](#调试和部署)
 
 ## 关系状态数徽章
 
@@ -155,3 +160,26 @@ Markdown: `![Likes](https://bilistats.lonelyion.com/views?uid=[你的UID]&type=l
 | `?style=social&label=关注` | ![](https://bilistats.lonelyion.com/followers?uid=7564991&style=social&label=关注) |
 | `?label=播放量&style=for-the-badge&color=3d3d3d&format=commas` | ![](https://bilistats.lonelyion.com/views?uid=7564991&?label=播放量&style=for-the-badge&color=3d3d3d&format=commas) |
 | `?label=获赞&style=for-the-badge&color=red&labelColor=ce4630` | ![](https://bilistats.lonelyion.com/views?uid=7564991&type=likes&label=获赞&style=for-the-badge&color=red&labelColor=ce4630) |
+
+
+## 调试和部署
+
+### 调试
+
+调试需要安装和配置好NodeJS 14以上版本以及[Vercel CLI](https://vercel.com/cli)。
+
+clone本项目后
+
+```sh
+npm install 或 yarn
+vercel dev
+```
+即可在本地运行Vercel Serverless Functions环境，并且可以自动反馈文件修改。
+
+### 部署
+
+目前本项目仅支持部署到Vercel，也欢迎移植到其他平台。
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flonelyion%2Fbilibili-stats-badges&env=SESSDATA&envDescription=%E9%9C%80%E8%A6%81B%E7%AB%99%E7%99%BB%E5%BD%95%E7%9A%84SESSDATA%EF%BC%8C%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95%E5%8F%AF%E4%BB%A5%E5%8F%82%E8%80%83%E8%BF%99%E4%B8%AA%E9%93%BE%E6%8E%A5&envLink=https%3A%2F%2Fwww.bilibili.com%2Fread%2Fcv12349604)
+
+点击上方按钮一键部署至Vercel，需要的环境变量已在部署步骤`Configure Project`中说明。
