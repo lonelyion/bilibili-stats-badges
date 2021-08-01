@@ -14,6 +14,7 @@ Bilibili状态徽章，可用于网站、README等地方<del>进行显摆（划�
 + [附加参数](#附加参数)
 + [混搭参数](#混搭参数)
 + [调试和部署](#调试和部署)
++ [TODOs](#TODOs)
 
 ## 关系状态数徽章
 
@@ -97,7 +98,7 @@ Markdown: `![Level](https://bilistats.lonelyion.com/level?uid=[你的UID])`
 
 ![Live Status](https://bilistats.lonelyion.com/live_status?uid=7564991)
 
-就很简单的在不在播
+就很简单的在不在播，这个UID也是用户ID不是直播间号
 
 链接: `https://bilistats.lonelyion.com/live_status?uid=[你的UID]`
 
@@ -141,8 +142,8 @@ Markdown: `![Live Status](https://bilistats.lonelyion.com/live_status?uid=[你�
 | 参数 | 外观 |
 | --- | --- |
 | `?label=粉丝数` | ![](https://bilistats.lonelyion.com/followers?uid=7564991&label=粉丝数) |
-| `?label=B站%20粉丝数` | ![](https://bilistats.lonelyion.com/followers?uid=7564991&color=B站%20粉丝数) |
-| `?label=直播` | ![](https://bilistats.lonelyion.com/live_status?uid=7564991&color=Live) |
+| `?label=B站%20粉丝数` | ![](https://bilistats.lonelyion.com/followers?uid=7564991&label=B站%20粉丝数) |
+| `?label=直播` | ![](https://bilistats.lonelyion.com/live_status?uid=7564991&label=直播) |
 
 ### label_color
 
@@ -210,3 +211,8 @@ vercel dev
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flonelyion%2Fbilibili-stats-badges&env=SESSDATA&envDescription=%E9%9C%80%E8%A6%81B%E7%AB%99%E7%99%BB%E5%BD%95%E7%9A%84SESSDATA%EF%BC%8C%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95%E5%8F%AF%E4%BB%A5%E5%8F%82%E8%80%83%E8%BF%99%E4%B8%AA%E9%93%BE%E6%8E%A5&envLink=https%3A%2F%2Fwww.bilibili.com%2Fread%2Fcv12349604)
 
 点击上方按钮一键部署至Vercel，需要的环境变量已在部署步骤`Configure Project`中说明。
+
+## TODOs
+
++ 支持更多的字段信息
++ 对一些只有两个值的信息（例如直播状态：`未开播`与`已开播`），增加两个color的支持以对应不同的状态

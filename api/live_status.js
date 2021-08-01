@@ -6,7 +6,7 @@ const defaults = {
   logo_color: '00A1D6',
   style: 'flat-square',
   format: 'none',
-  label: 'Bilibili直播间',
+  label: 'Bilibili 直播间',
   label_color: 'grey',
   uid: '7564991'
 }
