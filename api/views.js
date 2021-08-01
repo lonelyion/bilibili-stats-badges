@@ -3,8 +3,7 @@ const constructor = require('../src/badge_constructor');
 
 let defaults = {
   color: 'blue',
-  logo: 'bilibili', //Reference to https://simpleicons.org/?q=bilibili
-  logo_color: '00A1D6',
+  logo: '/svg/bilibili.svg',
   style: 'flat-square',
   format: 'none',
   label: 'Bilibili 播放数',
@@ -25,11 +24,9 @@ module.exports = (req, res) => {
   utils.fetch_upstat(req.query.uid, req.query.type)
   .then(count => {
     req.query.content = count;
-    let url = constructor.get_shieldio_url(req.query, defaults);
-    utils.fetch_url(url).then(response => {
+    let svg = constructor.get_shields_svg(req.query, defaults);
       res.setHeader('Content-Type', 'image/svg+xml');
       res.setHeader('Cache-Control', 'max-age=900, public');
-      res.status(200).send(response.data);
-    })
+      res.status(200).send(svg);
   })
 }

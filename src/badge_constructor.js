@@ -1,5 +1,5 @@
 const queryString = require('querystring');
-
+const { makeBadge, ValidationError } = require('../lib/badge-maker')
 function validate_parameter(value, pattern, init) {
   if(value && pattern.test(value)) {
     return value;
@@ -8,7 +8,7 @@ function validate_parameter(value, pattern, init) {
   }
 }
 
-export function get_shieldio_url(params, defaults) {
+export function get_shields_svg(params, defaults) {
   let color = validate_parameter(params.color, /^([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[A-Za-z]+)$/, defaults.color);
   let logo = validate_parameter(params.logo, /^[A-Za-z0-9\-]+$/, defaults.logo);
   let logo_color = validate_parameter(params.logo_color, /^([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[A-Za-z]+)$/, defaults.logo_color);
@@ -26,9 +26,17 @@ export function get_shieldio_url(params, defaults) {
       message = short_number(params.content);
       break;
     default: 
-      message = params.content;
+      message = params.content.toString();
   }
-
+  return makeBadge({
+    color: color,
+    logo: logo,
+    style: style,
+    label: label,
+    labelColor: label_color,
+    message: message
+  });
+  /*
   return 'https://img.shields.io/static/v1?' + queryString.stringify({
     color: color,
     logo: logo,
@@ -38,6 +46,7 @@ export function get_shieldio_url(params, defaults) {
     labelColor: label_color,
     message: message
   })
+  */
 }
 
 function number_format(number, decimals, dec_point, thousands_point) {
