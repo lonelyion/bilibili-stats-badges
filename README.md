@@ -186,8 +186,8 @@ Markdown: `![Live Status](https://bilistats.lonelyion.com/live_status?uid=[你�
 | 参数 | 外观 |
 | --- | --- |
 | `?style=social&label=关注` | ![](https://bilistats.lonelyion.com/followers?uid=7564991&style=social&label=关注) |
-| `?label=播放量&style=for-the-badge&color=3d3d3d&format=commas` | ![](https://bilistats.lonelyion.com/views?uid=7564991&?label=播放量&style=for-the-badge&color=3d3d3d&format=commas) |
-| `?label=获赞&style=for-the-badge&color=red&labelColor=ce4630` | ![](https://bilistats.lonelyion.com/views?uid=7564991&type=likes&label=获赞&style=for-the-badge&color=red&labelColor=ce4630) |
+| `?label=播放量&style=for-the-badge&color=3d3d3d&format=commas` | ![](https://bilistats.lonelyion.com/views?uid=7564991&label=播放量&style=for-the-badge&color=3d3d3d&format=commas) |
+| `?label=获赞&style=for-the-badge&color=blue&label_color=00a1d6&logo_color=white` | ![](https://bilistats.lonelyion.com/views?uid=7564991&type=likes&label=获赞&style=for-the-badge&color=blue&label_color=00a1d6&logo_color=white) |
 
 
 ## 调试和部署
