@@ -24,7 +24,7 @@ export function fetch_relation_stat (id, type) {
 }
 
 export function fetch_upstat(id, type) {
-  const promise = axios.get(`http://api.bilibili.com/x/space/upstat?mid=${id}`, {
+  const promise = axios.get(`https://api.bilibili.com/x/space/upstat?mid=${id}`, {
     headers: {
       Cookie: `SESSDATA=${sess_data};`,
       'User-Agent': UAs[Math.floor(Math.random()*UAs.length)]
@@ -44,7 +44,7 @@ export function fetch_upstat(id, type) {
 
 export function fetch_account_info(id, type) {
   //console.log(`SESSDATA=${sess_data}`);
-  const promise = axios.get(`http://api.bilibili.com/x/space/acc/info?mid=${id}`, {
+  const promise = axios.get(`https://api.bilibili.com/x/space/acc/info?mid=${id}`, {
     headers: {
       Cookie: `SESSDATA=${sess_data};`,
       'User-Agent': UAs[Math.floor(Math.random()*UAs.length)]
